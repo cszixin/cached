@@ -1,16 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-simplecache - Simple yet capable caching decorator for python.
-
-https://github.com/lonetwin/simplecache
-https://simplecache.readthedocs.org/en/latest/
-"""
-
-__author__ = "Steven Fernandez <steve@lonetwin.net>"
-__license__ = "MIT"
-__version__ = '0.3.0'
-
 from .backends import DictCache
 from .backends import RedisCache
 from .cdf import CacheDecoratorFactory

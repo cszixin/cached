@@ -1,6 +1,8 @@
-Here's an example of how you might use ``simplecache``
-
-.. code:: python
+   simplecache 是一个基于redis(以及内置dict)的简单缓存库，通过装饰器修饰需要缓存的方法以及函数
+   一.install:
+   git clone git@github.com:cszixin/cached.git
+   cd cache/simplecache && sudo python setup.py install
+..二. code:: python
 
     import time
     import simplecache
