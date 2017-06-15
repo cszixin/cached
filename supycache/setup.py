@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """ supycache -  Simple yet capable caching decorator for python
 
-Source code: https://github.com/lonetwin/supycache
+Source code: https://github.com/cszixin/cached
 """
 
 from setuptools import setup, find_packages
@@ -18,12 +18,12 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name = 'supycache',
-    version = '0.3.0',
+    version = '0.1.0',
     description = 'Simple yet capable caching decorator for python',
     long_description = long_description,
-    url = 'https://github.com/lonetwin/supycache',
-    author = 'Steven Fernandez',
-    author_email = 'steve@lonetwin.net',
+    url = 'https://github.com/cszixin/cached',
+    author = 'cszixin',
+    author_email = 'lcszixin@163.com',
     license = 'MIT',
     classifiers = [
         'Development Status :: 4 - Beta',
@@ -36,7 +36,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         ],
-    keywords = 'cache, caching, memcached, redis, memoize, memoization',
+    keywords = 'cache, caching,redis, memoize, memoization',
     packages = find_packages(exclude=['contrib', 'docs', 'tests*']),
 )
 
