@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import redis
+import json
 from base import BaseCache
 class RedisCache(BaseCache):
     def __init__(self, master="127.0.0.1:6379",salve=None,config=None):
@@ -35,7 +36,12 @@ class RedisCache(BaseCache):
             result[k] =v
         keys = self._sconn.keys()
         values = self._sconn.mget(keys)
-        result={"redis":self._sconn}
+        result={}
         map(t,keys,values)
         return result
+
+    def __str__(self):
+        return 'redis info:{0}\ncache:{1}'.format(self._mconn,json.dumps(self.data,indent=2))
+
+    __repr__ = __str__
 #r = RedisCache(master="192.168.48.100:6379")
