@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-supycache - Simple yet capable caching decorator for python.
+simplecache - Simple yet capable caching decorator for python.
 
-https://github.com/lonetwin/supycache
-https://supycache.readthedocs.org/en/latest/
+https://github.com/lonetwin/simplecache
+https://simplecache.readthedocs.org/en/latest/
 """
 
 __author__ = "Steven Fernandez <steve@lonetwin.net>"
@@ -21,8 +21,8 @@ default_backend = None
 def get_default_backend():
     """Returns the currently configured `default_backend`.
 
-    If not set, the `default_backend` is a `supycache.DictCache` instance. Use
-    `supycache.set_default_backend` to change this. A `backend` is any
+    If not set, the `default_backend` is a `simplecache.DictCache` instance. Use
+    `simplecache.set_default_backend` to change this. A `backend` is any
     (caching) object that has at least the `.get()`, `.set()` and `.delete()`
     methods.
     """
@@ -39,14 +39,14 @@ def set_default_backend(backend):
     default_backend = backend
 
 
-def supycache(**options):
+def simplecache(**options):
     """Decorates a function for caching/expiring cache depending on arguments.
 
-    This is the primary interface to use `supycache`. This decorator accepts
+    This is the primary interface to use `simplecache`. This decorator accepts
     the following parameters:
 
     - `backend` : The `backend` cache store to use for this cache key, if it is
-        different than `supycache.default_backend`.
+        different than `simplecache.default_backend`.
 
     - `cache_key` : Either a simple string, a format string or callable used to
         create the key used for caching the result of the function being

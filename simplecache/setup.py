@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-""" supycache -  Simple yet capable caching decorator for python
+""" simplecachecache -  Simple yet capable caching decorator for python
 
 Source code: https://github.com/cszixin/cached
 """
@@ -17,7 +17,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name = 'supycache',
+    name = 'simplecache',
     version = '0.1.0',
     description = 'Simple yet capable caching decorator for python',
     long_description = long_description,
