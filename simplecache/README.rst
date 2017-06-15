@@ -2,7 +2,7 @@
 ..  一.install:
 ..     git clone git@github.com:cszixin/cached.git
 ..   cd cache/simplecache && sudo python setup.py install
-..二. code:: python
+..  二. code:: python
 
 ..    import time
 ..    import simplecache
