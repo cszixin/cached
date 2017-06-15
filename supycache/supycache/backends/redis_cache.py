@@ -16,11 +16,18 @@ class RedisCache(BaseCache):
             self._sconn = redis.Redis(host=host_info[0], port=int(host_info[1]))
 
     def get(self,key):
-        return self._sconn.get(key)
+        result=self._sconn.get(key)
+        try:
+            return json.loads(result)
+        except exception as e:
+            return result
+
 
     def set(self,key,value):
         # 默认key的生成时间100s
         max_age = self.config.get('max_age',100)
+        if isinstance(value,dict):
+            value = json.dumps(value)
         self._mconn.setex(key,value,max_age)
 
     def delete(self, key):
