@@ -40,10 +40,12 @@ class CacheDecoratorFactory:
         @wraps(func)
         def cache_setter(*args, **kwargs):
             result = None
+            cached = kwargs.get('cached',True)
             key = self.key(*args, **kwargs) if callable(self.key) \
                 else self.key.format(*args, **kwargs)
             try:
                 result = self._backend.get(key)
+                result = result if cached == True else None
             except:
                 if not self.ignore_errors:
                     raise
